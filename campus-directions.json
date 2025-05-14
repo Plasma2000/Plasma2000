@@ -1,0 +1,195 @@
+{
+    "locations":[
+      {
+        "id": 1,
+        "name": "Library",
+        "directions": "Turn and go left until you find the stairs. Turn right and go straight. Turn left and go straight. Turn right and go straight. Turn left and go straight. Turn right and you made it to the library"
+      }, 
+        {
+          "id": 2,
+          "name": "E235",
+          "directions": "Head right from the Reception aree. Take the elevator to the second floor. From the elevator turn right. You have reached Dr Dickson's office"
+        },
+        {
+          "id": 3,
+          "name": "Discussion room",
+          "directions": "Head right from the Reception Area. Take the elevator to the second floor. From the elevator turn right. Go straight and turn left. To your next turn and go straight until you find Discussion roon 1 and 2 to your left"
+        },
+        {
+          "id": 4,
+          "name": "Study Centre",
+          "directions":"Head right from the Reception Area. Take the elevator to the second floor. From the elevator turn right. Go straight and turn left to your next turn. Go straight until you find the study centre to your right"
+        },
+
+        {
+          "id": 5,
+          "name": "Board Room",
+          "directions": "Head right from the Reception Area. Take the elevator to the second floor. From the elevator turn right. Go straight and turn left to your next turn. Go straight until your next turn. Turn right and you will find the board room"
+        }, 
+        {
+          "id": 6,
+          "name": "CV246",
+          "directions":"Head right from the Reception Area. Take the elevator to the second floor. From the elevator turn right, go straight. Turn left to your next turn and go straight until your next turn. Turn right and go straight. Turn right on your next turn and you will find the Computer laboratory"
+        },
+        {
+          "id": 7,
+          "name": "M004",
+          "directions": "Turn and go left from the Reception area until you reach the stairs. Turn right and go staight. Turn left and go straight. Turn left and you have made it to M004"
+        },
+        {
+          "id": 8,
+          "name":"DM021",
+          "directions": "Turn and go left from the Reception area until you reach the stairs and elevator. Turn right and go staight. Turn left and go straight. Turn right and go staight. Second and third door on your left is your destination DM021"
+        },
+        {
+          "id": 9,
+          "name":"DM007",
+          "directions":"Turn and go left from the Reception area until you reach the stairs and elevator. Turn right and go staight. Turn left and go straight.Turn right and go straight, fifth door on your left is your destination, DM007 "
+        },
+      {
+        "id": 10,
+        "name":"DM027",
+        "directions": "Turn and go left from the Reception area until you reach the stairs and elevator. Turn right and go staight. Turn left and go straight. Turn right and go straight and turn left. Second door on your left, you have made it to your destination, DM027"
+      },
+      {
+        "id": 11,
+        "name":"M211",
+        "directions": "Turn and go left fron the Reception Area until you reach the stairs and elevator. Take the elevator or stairs to the second floor. Take a left through M215. You have reached your destination, on the left side of the hallway is M211"
+      },
+      {
+        "id": 12,
+        "name":"M210",
+        "directions": "Turn and go left fron the Reception Area until you reach the stairs and elevator. Take the elevator or stairs to the second floor. Take a left through M215. You have reached your destination, M210 second door on the left side of the hallway"
+      },
+      {
+        "id": 13,
+        "name":"M209",
+        "directions": "Turn left fron the Reception Area and go straight until you reach the stairs and elevator. Take the elevator or stairs to the second floor. Take a left through M215. You have reached your destination, third door on the left side of the hallway is M209"
+      },
+      {
+        "id": 14,
+        "name": "M208",
+        "directions": "Turn  left fron the Reception Area and go straight until you reach the stairs and elevator. Take the elevator or stairs to the second floor. Take a left through M215. You have reached your destination, fourth door on the left side of the hallway is M208"
+      },
+      {
+        "id": 15,
+        "name":"DM203",
+        "directions": "Turn left fron the Reception Area and go straight until you reach the stairs and elevator. Take the elevator or stairs to the second floor. Take a left through M215 and go straight. Turn left through M232. Your destination DM203 is to your left"
+      },
+      {
+        "id": 16,
+        "name": "DM202",
+        "directions": "Turn left fron the Reception Area and go straight until you reach the stairs and elevator. Take the elevator or stairs to the second floor. Take a left through M215 and go straight. Turn left through M232. Your destination DM202 is to your left"
+      },
+      {
+        "id": 17,
+        "name": "M230",
+        "directions": "Turn left from the Reception area and go straight until you reach the elevator and stairs. Take the elevator or stairs to the second floor. Turn left and go through M215 door. Go straight and the second door on your right is your destination, M230 "
+      },
+      {
+        "id": 18,
+        "name": "M231",
+        "directions": "Turn left from the Reception area and go straight until you reach the elevator and stairs. Take the elevator or stairs to the second floor. Turn left and go through M215 door and go straight. The third door on your right is your destination, Ephraim Simasiku's office"
+      },
+      {
+        "id": 19,
+        "name": "M204",
+        "directions": "Turn left from the Reception area and go straight until you reach the elevator and stairs. Take the elevator or stairs to the second floor. Turn left and go through M215 door. Go straight until the end of the hallway. You have arrived at your destination, Edwin Tjramba boardroom"
+      },
+      {
+        "id": 20,
+        "name": "DM209",
+        "directions": "Turn left from the Reception area and go straight until you reach the elevator and stairs. Take the elevator or stairs to the second floor. Turn left and go through M215 door and go straight. Turn right and go through M232 door. In the corner on your left is your destination, IT office  "
+      },
+      {
+        "id": 21,
+        "name": "DM211",
+        "directions": "Turn left from the Reception area and go straight until you reach the elevator and stairs. Take the elevator or stairs to the second floor. Turn left and go through M215 door and go straight. Turn right and go through M232 door. Go straight until you reach the end of the hallway and go through DM220 door. Turn left and go through DO214 door, the second door on your right is your destination, Mr Mathew Abisai's office "
+      },
+      {
+        "id": 22,
+        "name": "CE219",
+        "directions": "Turn left from the Reception area and go straight until you reach the elevator and stairs. Take the elevator or stairs to the second floor. Turn left and go through M215 door. Go straight, turn right and go through M232 door. Go straight until you reach the end of the hallway. Go through DM220 door and turn left. Go through DO214 door, go straight and go through DO203 door. Turn left and go through DO220. On your right, the first door is your destination, CE219"
+      },
+      {
+        "id": 23,
+        "name": "CE217",
+        "directions": "Turn left from the Reception area and go straight until you reach the elevator and stairs. Take the elevator or stairs to the second floor. Turn left and go through M215 door. Go straight, turn right and go through M232 door. Go straight until you reach the end of the hallway. Go through DM220 door, turn left and go through DO214 door. Go straight and go through DO203 door. Turn left and go through DO220. On your right, the second door is your destination, Software Engineering lab 2"
+      },
+      {
+        "id": 24,
+        "name": "CE216",
+        "directions": "Turn left from the Reception area and go straight until you reach the elevator and stairs. Take the elevator or stairs to the second floor. Turn left and go through M215 door. Go straight, turn right and go through M232 door. Go straight until you reach the end of the hallway. Go through DM220 door, turn left and go through DO214 door. Go straight and go through DO203 door. Turn left and go through DO220. On your right, the third door is your destination, Software Engineering lab 3"
+      },
+      {
+        "id": 25,
+        "name": "CE213",
+        "directions": "Turn left from the Reception area and go straight until you reach the elevator and stairs. Take the elevator or stairs to the second floor. Turn left and go through M215 door. Go straight, turn right and go through M232 door. Go straight until you reach the end of the hallway. Go through DM220 door, turn left and go through DO214 door. Go straight and go through DO203 door. Turn left and go through DO220. On your right, the fifth door is your destination, Video conference room"
+      }, 
+      {
+        "id": 26,
+        "name": "CE208",
+        "directitons": "Turn left from the Reception area and go straight until you reach the elevator and stairs. Take the elevator or stairs to the second floor. Turn left and go through M215 door. Go straight, turn right and go through M232 door. Go straight until you reach the end of the hallway. Go through DM220 door, turn left and go through DO214 door. Go straight and go through DO203 door. Turn left and go through DO220. Turn left and go through DO214 door. Go straight and go through DO203 door. Turn left and walk through DO220 door. Go straight until the end of the hallway. Go through CE212 door, the second door is your destination SRC Non-Exclusive member's office"
+      },
+      {
+        "id": 27,
+        "name": "Ground Floor bathroom 1",
+        "directions": "Turn right from the Reception area and go straight until you reach the stairs and elevator. Turn left and go straight. Turn right and mid-corridor you will find bathroon 1"
+      },
+      {
+        "id": 28,
+        "name": "Ground Floor bathroom 2",
+        "directions": "Turn right from the Reception area and go straight until you reach the stairs and elevator. Turn left and go straight. Turn right and go straight. Turn left of CV004 and go straight, mid-corridor, you will find bathroom 2"
+      },
+      {
+        "id": 29,
+        "name": "Ground Floor bathroom 3",
+        "directions": "Turn right from the Reception area and go straight until you reach the stairs and elevator. Turn left and go straight. Turn right and go straight. Turn left of CV004 and go straight. Turn left of CV029 then go straight till you reach CV041. Turn left and then turn right of CV043, mid-corridor bathroom 3"
+      },
+      {
+        "id": 30,
+        "name": "Ground Floor bathroom 4",
+        "directions": "Turn left from the Reception area and walk aproximatly 20 meters. You have found bathroon 4."
+      },
+      {
+        "id": 31,
+        "name": "Ground Floor bathroom 5",
+        "directions": "Turn left from the Reception area and go straight until you reach the stairs and elevator. Turn right and go straight. Turn left and you have reached the Ground floor bathroon 5"
+      },
+      {
+        "id": 32,
+        "name": "Ground Floor bathroom 6",
+        "directions": "Turn left from theReception area and go straight until you reach the stairs and elevator. Turn right and go straight. Turn left and go straight. Turn right of the Mechanical Engineering laboratory. Go straight and turn left. Before you exsit the labs turn right. You have found bathroom 6"
+      },
+      {
+        "id": 33,
+        "name": "First Floor bathroom 1",
+        "directions": "Turn right from the Reception area and go straight until you reach the stairs and elevator. Take the stairs or elevator to the first floor. Turn left, go straight. Turn right, mid-corridor you will find bathroom 1"
+      },
+      {
+        "id": 34,
+        "name": "First Floor bathroom 2",
+        "directions": "Turn right from the Reception area and go straight until you reach the stairs and elevator. Take the stairs or elevator to the first floor. Turn left, go straight. Turn right and go straight. Turn left of CV103 mid-corridor you will find bathroom 2"
+      },
+      {
+        "id": 35,
+        "name": "First Floor bathroom 3",
+        "directions": "Turn right from the Reception area and go straight until you reach the stairs and elevator. Take the stairs or elevator to the first floor. Turn left and go straight. Turn right and go straight. Turn left of CV103 and go straight. Turn right and then turn left of CV122. Go straight until you reach the elevator. Turn right and mid-corridor you will find bathroom 3"
+      },
+      {
+        "id": 36,
+        "name": "First Floor bathroom 4",
+        "directions": "Turn left from the Reception area and go straight until you reach the stairs and elevator. Take the stairs or elevator to the first floor. Turn left and then turn right. Go straight and turn left. Go straight about 3 meters and turn right, you will find bathroom 4"
+      },
+      {
+        "id": 37,
+        "name": "First Floor bathroom 5",
+        "directions": "Turn left from the Reception area and go straight until you reach the stairs and elevator. Take the stairs or elevator to the first floor. Turn left and then turn right. Go straight and turn left. Go straight and turn right before you reach the stairs. Go straight, mid-corridor you will find bathroom 5"
+      },
+      {
+        "id": 38,
+        "name": "First Floor bathroom 6",
+        "directions": "Turn left from the Reception area and go straight until you reach the stairs and elevator. Take the stairs or elevator to the first floor. Turn left and then turn right. Go straight and turn left. Go straight and turn right before you reach the stairs. Go straightand turn left. Turn right and go straight. Turn right and then turn left, mid-corridor you will find bathroom 6"
+      }
+    ]
+}
