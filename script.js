@@ -1,130 +1,3 @@
-// let campusData = null;
-// const displayDiv = document.getElementById("display-directions");
-// let currentSentenceIndex = 0;
-// let directionSentences = [];
-
-// fetch('https://campus-directions-8cffa-default-rtdb.firebaseio.com/.json')
-// .then(response => response.json())
-// .then(data =>{
-//     console.log("Fetched Data:", JSON.stringify(data, null, 2));
-//     console.log("Keys in data:", Object.keys(data));
-//     campusData = data;
-    
-// })
-// .catch(error =>{
-//     console.error('Error fetching data:', error);
-// });
-
-
-// document.addEventListener("DOMContentLoaded", function(){
-//     // const directionForm = document.getElementById("direction-form");
-//     // const displayDiv = document.getElementById("display-directions");
-//     displayDiv.style.display = "none";
-// });
-
-// document.getElementById("direction-form").addEventListener("submit", function(event)
-// {
-//     event.preventDefault();
-
-//     const endPoint = document.getElementById("end-point").value.trim().toLowerCase();
-    
-
-//     if(!campusData){
-//         displayDiv.style.display = "block";
-//         displayDiv.innerText = "Directions still loading. Please try again.";
-//         return;
-//     }
-
-//     const location = campusData.locations.locations.find(loc => loc.name.toLowerCase()=== endPoint);
-
-//     if (location){
-//         // console.log(location);
-//         displayDiv.style.display = "block";
-//         displayDiv.innerText = `Directions from Reception Area to ${location.name}: ${location.directions}`;
-//         // speakText(`Directions from Reception Area to ${location.name}: ${location.directions}`);
-//     }
-//     else{
-//         displayDiv.style.display = "block";
-//         displayDiv.innerText = "Location not found. Please enter a valid destination.";
-//         speakText("Location not found. Please enter a valid destination.");
-//     }
-// });
-
-
-// let sentenceArray = [];
-
-// document.getElementById("direction-form").addEventListener("submit", function(event){
-//   event.preventDefault();
-//   const endPoint = document.getElementById("end-point").ariaValueMax.trim().toLowerCase();
-
-//   if(!campusData){
-//     displayDiv.style.display = "block";
-//     displayDiv.innerText = "Directions still loading. Please try again later.";
-//     return;
-//   }
-
-//   const location = campusData.locations.locations.find(loc => loc.name.toLowerCase() === endPoint);
-
-//   if (location){
-//     const fullDirections = `Directions from Reception Area to ${location.name}: ${location.directions}`;
-//     sentenceArray = fullDirections.split('.').filter(s => s.trim() !== '').map(s => s.trim() + '.');
-//     currentSentenceIndex = 0;
-
-//     displayDiv.innerHTML = `
-//          <p id="direction-sentence"> ${sentenceArray[0]}</p>
-//          <button id="next-sentence">Next</button>
-//     `;
-//     displayDiv.style.display = "block";
-//   } else{
-//     displayDiv.style.display = "block";
-//     displayDiv.innerText = "Location not found. Please enter a valid destination.";
-//     speakText("Location not found. Please enter a valid destination.");
-//   }
-// });
-
-// document.getElementById("speak-button").addEventListener("click", () => {
-//     const displaytext = displayDiv.innerText;
-//     console.log(displaytext);
-//     if (displaytext &&
-//          !displaytext.includes( "Location not found. Please enter a valid destination.") &&
-//          !displaytext.includes(" Directions still loading. Please try again,")){
-//         speakText(displaytext);
-//     }
-    
-// });
-
-// function showCurrentSentence(locationName){
-//   displayDiv.style.display = "block";
-
-//   const currentSentence = directionSentences[currentSentenceIndex];
-//   const remaining = currentSentenceIndex < directionSentences.length - 1;
-
-//   displayDiv.innerHTML = `
-//   <p><s"trong>${locationName}</strong>: ${currentSentence}</p>
-//   ${remaining ? '<button id="next-sentence"> Next</button>' : '<p><em>You made it to your destination.</em></p>'}
-//   `;
-
-// speakText (currentSentence);
-
-// if (remaining){
-//   document.getElementById("next-sentence").addEventListener("click", () =>{
-//     currentSentenceIndex++;
-//     showCurrentSentence(locationName);
-//   });
-// }
-// }
-
-// function speakText(text){
-//   const synth = window.speechSynthesis;
-
-//   if(!synth) {
-//     console.error("Speech Synthesis is not supported in this browser.");
-//     return;
-//   }
-
-//   const utterance = new SpeechSynthesisUtterance(text);
-//   synth.speak(utterance);
-// }
 
 let campusData = null;
 const displayDiv = document.getElementById("display-directions");
@@ -159,10 +32,10 @@ document.addEventListener("DOMContentLoaded", function() {
     displayDiv.style.display = "none";
 });
 
-window.speechSynthesis.onvoiceschanged = () => {
-    const voices = speechSynthesis.getVoices();
-    console.log("Available voices:", voices.map(v => v.name));
-};
+// window.speechSynthesis.onvoiceschanged = () => {
+//     const voices = speechSynthesis.getVoices();
+//     console.log("Available voices:", voices.map(v => v.name));
+// };
 
 document.getElementById("direction-form").addEventListener("submit", function(event) {
     event.preventDefault();
@@ -192,7 +65,7 @@ document.getElementById("direction-form").addEventListener("submit", function(ev
     } else {
         displayDiv.style.display = "block";
         directionText.innerText = "Location not found. Please enter a valid destination.";
-        speakText("Location not found. Please enter a valid destination.");
+        speakwithElevenLabs("Location not found. Please enter a valid destination.");
     }
 });
 
@@ -210,8 +83,9 @@ document.getElementById("speak-button").addEventListener("click", () => {
     const displaytext = directionText.innerText;
     if (displaytext &&
         displaytext !== "Location not found. Please enter a valid destination." &&
-        displaytext !== "Directions still loading. Please try again.") {
-        speakText(displaytext);
+        displaytext !== "Directions still loading. Please try again."
+    ) {
+        speakwithElevenLabs(displaytext);
     }
 });
 
@@ -224,16 +98,47 @@ document.getElementById("close-directions").addEventListener("click", () => {
     directionSentences = [];
 });
 
-function speakText(text) {
-    const synth = window.speechSynthesis;
-    synth.cancel();
+// function speakText(text) {
+//     const synth = window.speechSynthesis;
+//     synth.cancel();
 
-    const voices = synth.getVoices();
-    const preferredVoiceName = "Google UK English Female"; 
-    const selectedVoice = voices.find(voice => voice.name === preferredVoiceName) || voices[0];
+//     const voices = synth.getVoices();
+//     const preferredVoiceName = "Google UK English Female"; 
+//     const selectedVoice = voices.find(voice => voice.name === preferredVoiceName) || voices[0];
 
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.voice = selectedVoice;
-    utterance.lang = selectedVoice.lang;
-    synth.speak(utterance);
-}
+//     const utterance = new SpeechSynthesisUtterance(text);
+//     utterance.voice = selectedVoice;
+//     utterance.lang = selectedVoice.lang;
+//     synth.speak(utterance);
+// }
+
+async function speakwithElevenLabs(text) {
+
+    try{
+    const response = await
+    fetch("https://api.elevenlabs.io/v1/text-to-speech/UgBBYS2sOqTuMpoF3BR0",{
+        method: "POST",
+        headers:{
+            "Content-Type": "application/json",
+            "xi-api-key": "sk_4bccf9c2c249525b0cee994e8c54877a556cbd01785dba95"
+        },
+        body: JSON.stringify({
+            text: text,
+            model_id: "eleven_monolingual_v1",
+            voice_settings:{
+                stability: 0.5,
+                similarity_boost: 0.75
+            }
+        })
+    });
+
+    if (!response.ok) throw new Error("Failed to generate audio");
+    const audioBlob = await response.blob();
+    const audioUrl = URL.createObjectURL(audioBlob);
+    const audio = new Audio(audioUrl);
+    audio.play();
+
+    } catch(err){
+        console.error("Error using ElevenLabs:", err.message);
+    }
+    }
