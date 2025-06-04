@@ -48,7 +48,7 @@ document.getElementById("direction-form").addEventListener("submit", function(ev
     }
 
     const locationsArray = Object.values(campusData.locations.locations);
-    const location = locationsArray.find(loc => loc && loc.name && loc.name.toLowerCase() === endPoint);
+    const locations.locations = locationsArray.find(loc => loc && loc.name && loc.name.toLowerCase() === endPoint);
 
     if (location) {
         directionSentences = location.directions.split(/(?<=[.!?])\s+/);
