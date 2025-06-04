@@ -47,7 +47,7 @@ document.getElementById("direction-form").addEventListener("submit", function(ev
         return;
     }
 
-    const locationsArray = Object.values(campusData.locations);
+    const locationsArray = Object.values(campusData.locations.locations);
     const location = locationsArray.find(loc => loc && loc.name && loc.name.toLowerCase() === endPoint);
 
     if (location) {
