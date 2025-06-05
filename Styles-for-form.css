@@ -251,32 +251,6 @@ color: rgb(78, 10, 78);
     cursor: pointer;
   }
 
-  @media(max-width:768px){
-    body{
-      font-size: 14px;
-  
-    }
-    img{
-      width: 200px;
-    }
-    button{
-      font-size: 16px;
-      padding: 10px 20px;
-    }
-  }
 
-  @media(max-width:576px){
-    body{
-      font-size: 12px;
-   
-    }
-    img{
-      width: 150px;
-    }
-    button{
-      font-size: 14px;
-      padding: 8px 16px;
-    }
-  }
   
 
