@@ -255,8 +255,7 @@ color: rgb(78, 10, 78);
   @media(max-width:768px){
     body{
       font-size: 14px;
-      overflow-x: hidden;
-      overflow-y: auto;
+  
     }
     img{
       width: 200px;
@@ -270,8 +269,7 @@ color: rgb(78, 10, 78);
   @media(max-width:576px){
     body{
       font-size: 12px;
-      overflow-x: hidden;
-      overflow-y: auto;
+   
     }
     img{
       width: 150px;
