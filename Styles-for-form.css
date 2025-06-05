@@ -95,6 +95,7 @@ color: rgb(78, 10, 78);
 
   *{
     font-family: Georgia, 'Times New Roman', Times, serif;
+   box-sizing: border-box;
    }
    
    body{
@@ -102,11 +103,19 @@ color: rgb(78, 10, 78);
       padding: 0;
       background-image: url(galaxy.jpg);
       background-size: cover;
-      height: 100vh;
+     min-height: 100vh;
+      height: auto;
       text-align: center;
       overflow-x: hidden;
       overflow-y: auto;
   }
+
+  html, body{
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+
   h1{
     text-transform: uppercase;
   }
