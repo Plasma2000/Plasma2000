@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.getElementById("direction-form").addEventListener("submit", function(event) {
     event.preventDefault();
+    console.log("Form submitted");
     const endPoint = document.getElementById("end-point").value.trim().toLowerCase();
 
     if (!campusData) {
@@ -48,9 +49,9 @@ document.getElementById("direction-form").addEventListener("submit", function(ev
     }
 
     const locationsArray = Object.values(campusData.locations.locations);
-    const locations.locations = locationsArray.find(loc => loc && loc.name && loc.name.toLowerCase() === endPoint);
+    const location = locationsArray.find(loc => loc && loc.name && loc.name.toLowerCase() === endPoint);
 
-    if (location) {
+    if (location && location.directions) {
         directionSentences = location.directions.split(/(?<=[.!?])\s+/);
         currentSentenceIndex = 0;
 
@@ -107,7 +108,8 @@ document.getElementById("close-directions").addEventListener("click", () => {
 //     const selectedVoice = voices.find(voice => voice.name === preferredVoiceName) || voices[0];
 
 //     const utterance = new SpeechSynthesisUtterance(text);
-//     utterance.voice = selectedVoice;
+//     uttera
+// nce.voice = selectedVoice;
 //     utterance.lang = selectedVoice.lang;
 //     synth.speak(utterance);
 // }
