@@ -3,59 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find Location - Plasma 2000</title>
-    <link rel="stylesheet" href="find_location.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <title>Plasma 2000</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <div class="header">
-        <a href="#" class="logo">PLASMA 2000</a>
+    <div class="hero">
 
-        <nav class="navbar">
-            <a href="index.html">HOME</a>
-            <a href="locations.html">LOCATIONS</a>
-            <a href="find_location.html" class="active">FIND LOCATION</a>
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="Background-clip1.mp4" type="video/mp4">
+        </video>
+
+        <nav>
+            <img src="logo.svg" class="logo">
+            <span class="logo-text">PLASMA 2000</span>
         </nav>
+
+        <div class="content">
+            <h1>Explore More</h1>
+            <a href="locations.html">Locations</a>
+            <a href="find_location.html">Find Location</a>
+        </div>
+
+        <div class="slogan">
+            <p>"Like the constellation, We will show you the way"</p>
+        </div>
+
     </div>
-
-    <video autoplay loop muted plays-inline class="back-video">
-        <source src="Background-clip2.mp4" type="video/mp4">
-    </video>
-
-    
-    <section class="home">
-        <div class="home-content">
-            <h1>Easily discover your destination on the José Eduardo dos Santos (JEDS) Campus, starting right from the reception area.</h1>
-            <h2> Just face the front desk and let us guide you!</h2>
-            <br>
-            <form id="direction-form" class="form"> 
-                <div class="input-container">
-                    <input type="text" placeholder="Enter your destination" id="end-point" class="input-destination">
-                </div>
-                <br>
-                <br>
-                <br>
-            
-                <div class="btn-box">
-                    <button type="submit">Get Directions</button>
-                </div>
-            </form>
-
-        </div>
-       
-        <div id="display-directions" style="display: none;">
-            <p id="direction-text"></p>
-            <div class="display-buttons">
-                <button id="next-sentence" style="display: none;">Next</button>
-                <button id="speak-button"><i class="fa-solid fa-microphone"></i> Speak </button>
-                <button id="close-directions"> <i class="fa-solid fa-circle-xmark"></i> </button>
-            </div>
-        </div>
-
-    </section>
-  
-    <script src="script.js"></script>
 </body>
-</html>
