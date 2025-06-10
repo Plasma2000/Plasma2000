@@ -1,90 +1,61 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Directions</title>
-    <link rel="stylesheet" href="Styles-for-form.css">
-</head>
-<body>
-
-
-    <div class="form">
-
-    <h1>Navigate JEDS campus with ease</h1>
-
-    <div id="back">
-        <img src="Plasma 2000_Logo.png" alt=" Our Logo">
-    </div>
-
-    <h2>Fill out the form and lets get you started</h2>
-
-
- <form id="direction-form" class="forn">
-    <div class="ref-point">
-        <p> <b>Reference point: Reception Area</b> </p>
-    </div>
-    <label for="end-point">End Point:</label>
-    <input type="text" id="end-point" name="end-point" placeholder="Enter end point" required>
-    <div>
-        <button type="submit" id="get-directions"  >Get Direction</button>
-        <button id="speak-button">Speak Directions</button>
-    </div>
-</form>
-    <div id="display-directions">
-        
-    </div>
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Directions</title>
-    <link rel="stylesheet" href="Styles-for-form.css">
+    <title>Find Location - Plasma 2000</title>
+    <link rel="stylesheet" href="find_location.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
+
 <body>
+    <div class="header">
+        <a href="#" class="logo">PLASMA 2000</a>
 
+        <nav class="navbar">
+            <a href="index.html">HOME</a>
+            <a href="locations.html">LOCATIONS</a>
+            <a href="find_location.html" class="active">FIND LOCATION</a>
+        </nav>
+    </div>
 
-    <div class="form">
+    <video autoplay loop muted plays-inline class="back-video">
+        <source src="Background-clip2.mp4" type="video/mp4">
+    </video>
 
-    <h1>Navigate JEDS campus with ease</h1>
+    
+    <section class="home">
+        <div class="home-content">
+            <h1>Easily discover your destination on the José Eduardo dos Santos (JEDS) Campus, starting right from the reception area.</h1>
+            <h2> Just face the front desk and let us guide you!</h2>
+            <br>
+            <form id="direction-form" class="form"> 
+                <div class="input-container">
+                    <input type="text" placeholder="Enter your destination" id="end-point" class="input-destination">
+                </div>
+                <br>
+                <br>
+                <br>
+            
+                <div class="btn-box">
+                    <button type="submit">Get Directions</button>
+                </div>
+            </form>
 
-    <div id="back">
-        <img src="Plasma 2000_Logo.png" alt=" Our Logo">
-        <div class="slogan">
-            <p id="slogan-text">
-                <b> "Like the Constellations, we will show you the way!!!"  </b>
-            </p>
         </div>
-    </div>
+       
+        <div id="display-directions" style="display: none;">
+            <p id="direction-text"></p>
+            <div class="display-buttons">
+                <button id="next-sentence" style="display: none;">Next</button>
+                <button id="speak-button"><i class="fa-solid fa-microphone"></i> Speak </button>
+                <button id="close-directions"> <i class="fa-solid fa-circle-xmark"></i> </button>
+            </div>
+        </div>
 
-    <h2>Fill out the form and lets get you started</h2>
-
-
- <form id="direction-form" class="forn">
-    <div class="ref-point">
-        <p> <b>Reference point: Reception Area</b> </p>
-    </div>
-    <label for="end-point">End Point:</label>
-    <input type="text" id="end-point" name="end-point" placeholder="Enter end point" required>
-    <div>
-        <button type="submit" id="get-directions" >Get Direction</button>
-        <button id="speak-button" type="button">Speak Directions</button>
-    </div>
-</form>
-    <div id="display-directions">
-        <p id="direction-text"></p>
-        <button id="next-sentence" style="display: none;">Next</button>
-        <button id="close-directions" type="button">Close</button>
-    </div>
-</div>
-<script src="script.js"></script>
+    </section>
+  
+    <script src="script.js"></script>
 </body>
 </html>
