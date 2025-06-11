@@ -1,4 +1,3 @@
-
 let campusData = null;
 const displayDiv = document.getElementById("display-directions");
 const directionText = document.getElementById("direction-text");
@@ -39,34 +38,45 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.getElementById("direction-form").addEventListener("submit", function(event) {
     event.preventDefault();
-    console.log("Form submitted");
+    console.log("Form submitted. Current endpoint:", document.getElementById("end-point").value.toLowerCase());
     const endPoint = document.getElementById("end-point").value.trim().toLowerCase();
 
     if (!campusData) {
+        console.log("campusData is null. showing loading message.");
         displayDiv.style.display = "block";
         directionText.innerText = "Directions still loading. Please try again.";
         return;
     }
 
+    console.log("Searching for destination:", endPoint);
+
     const locationsArray = Object.values(campusData.locations.locations);
     const location = locationsArray.find(loc => loc && loc.name && loc.name.toLowerCase() === endPoint);
 
+    console.log("Location found:", location);
+
     if (location && location.directions) {
+        console.log("Directions found for location.");
         directionSentences = location.directions.split(/(?<=[.!?])\s+/);
         currentSentenceIndex = 0;
 
         if (directionSentences.length > 0) {
+            console.log("Displaying first sectence:", directionSentences[0]);
             directionText.innerText = directionSentences[0];
             displayDiv.style.display = "block";
+            document.getElementById("direction-form").style.display = "none";
             nextButton.style.display = directionSentences.length > 1 ? "inline-block" : "none";
         } else {
+            console.log("No sentences in directions string.");
             directionText.innerText = "No directions found.";
             nextButton.style.display = "none";
         }
     } else {
+        console.log("Location not found or no directions for it.");
         displayDiv.style.display = "block";
+        document.getElementById("direction-form").style.display = "none";
         directionText.innerText = "Location not found. Please enter a valid destination.";
-        speakwithElevenLabs("Location not found. Please enter a valid destination.");
+        // speakwithElevenLabs("Location not found. Please enter a valid destination.");
     }
 });
 
@@ -97,6 +107,8 @@ document.getElementById("close-directions").addEventListener("click", () => {
     directionText.innerText = "";
     currentSentenceIndex = 0;
     directionSentences = [];
+
+    document.getElementById("direction-form").style.display = "block"
 });
 
 // function speakText(text) {
@@ -115,6 +127,12 @@ document.getElementById("close-directions").addEventListener("click", () => {
 // }
 
 async function speakwithElevenLabs(text) {
+    console.log("Attempting to speak with Elevenlabs. Text:", text);
+
+    if(!text){
+        console.warn("No text provided to Elevenlabs speech function.");
+        return;
+    }
 
     try{
     const response = await
@@ -134,11 +152,33 @@ async function speakwithElevenLabs(text) {
         })
     });
 
-    if (!response.ok) throw new Error("Failed to generate audio");
+    console.log("ElevenLabs API response status:", response.status);
+
+    // if (!response.ok) throw new Error("Failed to generate audio");
+    // const audioBlob = await response.blob();
+    // const audioUrl = URL.createObjectURL(audioBlob);
+    // const audio = new Audio(audioUrl);
+    // audio.play();
+
+
+    if (!response.ok) {
+        const errorText = await response.text(); // Try to get error message from ElevenLabs
+        console.error("ElevenLabs API Error Response:", errorText); // New log
+        throw new Error(`Failed to generate audio: ${response.status} ${response.statusText} - ${errorText}`);
+    }
+
     const audioBlob = await response.blob();
+    console.log("Audio Blob received:", audioBlob);
+
     const audioUrl = URL.createObjectURL(audioBlob);
     const audio = new Audio(audioUrl);
     audio.play();
+    console.log("Audio attempting to play.");
+
+    audio.onended = () => {
+        URL.revokeObjectURL(audioUrl);
+        console.log("Audio playback ended, Object URL revoked.");
+    };
 
     } catch(err){
         console.error("Error using ElevenLabs:", err.message);

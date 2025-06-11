@@ -2,7 +2,7 @@
     "locations":[
       {
         "id": 1,
-        "name": "Library",
+        "name": "Library", 
         "directions": "Turn and go left until you find the stairs. Turn right and go straight. Turn left and go straight. Turn right and go straight. Turn left and go straight. Turn right and you made it to the library"
       }, 
         {
@@ -18,7 +18,7 @@
         {
           "id": 4,
           "name": "Study Center",
-          "directions":"Head right from the Reception Area. Take the elevator to the second floor. From the elevator turn right. Go straight and turn left to your next turn. Go straight until you find the study centre to your right. You have reached your destination"
+          "directions":"Head right from the Reception Area. Take the elevator to the second floor. From the elevator turn right. Go straight and turn left to your next turn. Go straight until you find the study centre to your right. You have reached your destination."
         },
 
         {

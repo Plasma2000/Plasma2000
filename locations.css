@@ -88,6 +88,12 @@ body{
     font-weight: 600;
 }
 
+.home-content p{
+    font-size: 30px;
+    font-weight: 600;
+    font-style: italic;
+}
+
 .list-left,
 .list-right,
 .list-bottom-center{
@@ -96,16 +102,17 @@ body{
     z-index: 3;
     font-weight: 500;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-    padding: 10px;
+    padding: 20px;
     background-color: rgba(231, 222, 222, 0.4);
     border-radius: 8px;
+    margin-top: 2%;
 }
 
 .list-left {
     top: 350px; 
     left: 6%;
     width: 500px;
-    height: 450px;
+    height: 720px;
     text-align: center;
 }
 
@@ -113,16 +120,16 @@ body{
     top: 350px; 
     right: 6%;
     width: 500px;
-    height: 450px;
+    height: 720px;
     text-align: center;
 }
 
 .list-bottom-center{
     position: relative;
-    margin-top: 500px;
+    margin-top: 750px;
     margin-bottom: 30px;
     width: 500px;
-    height: 450px;
+    height: 720px;
     text-align: center;
 }
 
