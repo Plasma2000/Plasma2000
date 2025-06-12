@@ -134,13 +134,14 @@ async function speakwithElevenLabs(text) {
         return;
     }
 
+    
     try{
     const response = await
-    fetch("https://api.elevenlabs.io/v1/text-to-speech/UgBBYS2sOqTuMpoF3BR0",{
+    fetch("https://api.elevenlabs.io/v1/text-to-speech/56AoDkrOh6qfVPDXZ7Pt",{
         method: "POST",
         headers:{
             "Content-Type": "application/json",
-            "xi-api-key": "sk_4bccf9c2c249525b0cee994e8c54877a556cbd01785dba95"
+            "xi-api-key": "sk_cb8f380e1877dbcfb3031f5eefdc8c67e8bf1ebee319678b"
         },
         body: JSON.stringify({
             text: text,
@@ -151,6 +152,7 @@ async function speakwithElevenLabs(text) {
             }
         })
     });
+
 
     console.log("ElevenLabs API response status:", response.status);
 
